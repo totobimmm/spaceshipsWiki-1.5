@@ -93,16 +93,22 @@ export default function Home() {
         ))}
       </nav>
       <div className=" bg-[url('https://twist-tales.com/wp-content/uploads/2023/09/Cometh-Cosmik-Battle-Title-16-9.png')] no-repeat bg-cover bg-center h-screen">
-        <Image />
+        <img
+          src={
+            "https://cdn.prod.website-files.com/659d7bdc74363cd63d1a332c/65a55486a34a8c57585cf512_logo-png-cropped-p-1080.png"
+          }
+          alt="Cosmik Battle Logo"
+          width={100}
+          height={100}
+        />
       </div>
       <div className=" flex flex-row flex-wrap justify-center items-center">
         {spaceships &&
           spaceships.map((spaceship) => (
             <Link
               className="  bg-[rgba(255, 255, 255, 0.8)] hover:bg-[rgba(120, 120, 120, 0.8)] text-white p-2 rounded-md"
-              as={"a"}
               key={spaceship.id}
-              href={`/${spaceship.name}`}>
+              href={`/${spaceship.href}`}>
               {spaceship.name}
             </Link>
           ))}

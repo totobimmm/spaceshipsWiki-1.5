@@ -17,45 +17,49 @@ export default function SpaceshipPage() {
     }
   }, [searchParams]);
 
-  const spaceship = spaceships.find((ship) => ship.name === name);
-  const id = spaceship.id;
+  const spaceship = spaceships.find((ship) => ship.href === name);
 
   if (!spaceship) {
-    return <div>Vaisseau non trouvé</div>;
+    return (
+      <div className=" text-white ">
+        {usePathname().substring(1)} non trouvé
+      </div>
+    );
   }
 
   const updateImageSrc = useCallback(() => {
     const formattedNumber = String(imageNumber - 1).padStart(4, "0");
     setImageUrl(
-      `https://images.service.cometh.io/${id}00${formattedNumber}.png`
+      `https://images.service.cometh.io/${spaceship.id}00${formattedNumber}.png`
     );
-  }, [imageNumber, id]);
+  }, [imageNumber, spaceship.id]);
 
   useEffect(() => {
     updateImageSrc();
   }, [updateImageSrc]);
 
   return (
-    <div className=" min-h-screen flex justify-center items-center flex-col">
+    <div className=" min-h-screen text-white flex justify-center items-center flex-col">
       <input
-        className=" fixed bottom-0 left-0 w-full p-2"
+        contentEditable
+        className=" fixed top-[7rem] left-6 w-[18%] p-2"
         type="number"
         value={imageNumber}
         onChange={(e) => setImageNumber(e.target.value)}
       />
       <img className="w-1/2" src={imageUrl} alt={spaceship.name} />
       <p>model: {spaceship.name}</p>
-      <p>Couleur principale: {spaceship.primaryColor}</p>
-      <p>Couleur secondaire: {spaceship.secondaryColor}</p>
-      <p>Propriétaire actuel: {spaceship.currentOwner}</p>
-      <p>Statut: {spaceship.status}</p>
-      <p>Utilisation principale: {spaceship.primaryUse}</p>
-      <p>Longueur: {spaceship.length}</p>
-      <p>Largeur: {spaceship.width}</p>
-      <p>Hauteur: {spaceship.height}</p>
-      <p>Vitesse maximale: {spaceship.topSpeed}</p>
-      <p>Équipage: {spaceship.crew}</p>
-      <p>Armes: {spaceship.weapons}</p>
+      <p>Primary Color: {spaceship.primaryColor}</p>
+      <p>Secondary Color: {spaceship.secondaryColor}</p>
+      <p>Current Owner: {spaceship.currentOwner}</p>
+      <p>Status: {spaceship.status}</p>
+      <p>Primary Use: {spaceship.primaryUse}</p>
+      <p>Length: {spaceship.length}</p>
+      <p>Width: {spaceship.width}</p>
+      <p>Height: {spaceship.height}</p>
+      <p>Top Speed: {spaceship.topSpeed}</p>
+      <p>Crew: {spaceship.crew}</p>
+      <p>Weapons: {spaceship.weapons}</p>
     </div>
   );
 }
