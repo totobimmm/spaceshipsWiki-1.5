@@ -39,8 +39,9 @@ export default function SpaceshipPage() {
   }, [updateImageSrc]);
 
   return (
-    <div className=" min-h-screen text-white flex justify-center items-center flex-col">
+    <div className=" min-h-screen text-white flex justify-center items-center flex-col gap-8 ">
       <input
+        readOnly={spaceship.maxNumber === 1 ? true : false}
         className={` text-center bg-transparent border rounded-md hover:border-[grey] duration-300 fixed top-[7rem] left-6 w-[18%] p-2 `}
         type="number"
         value={imageNumber}
@@ -63,7 +64,7 @@ export default function SpaceshipPage() {
       )}
       <img
         id="card"
-        className={`w-1/4 ${
+        className={`w-[45%] max-w-[580px] min-w-[150px] ${
           imageNumber > spaceship.maxNumber || imageNumber < 1
             ? "hidden"
             : "visible"
@@ -71,19 +72,22 @@ export default function SpaceshipPage() {
         src={imageUrl}
         alt={spaceship.name}
       />
-      <div className=" text-center ">
-        <p>model: {spaceship.name}</p>
-        <p>Primary Color: {spaceship.primaryColor}</p>
-        <p>Secondary Color: {spaceship.secondaryColor}</p>
-        <p>Current Owner: {spaceship.currentOwner}</p>
-        <p>Status: {spaceship.status}</p>
-        <p>Primary Use: {spaceship.primaryUse}</p>
-        <p>Length: {spaceship.length}</p>
-        <p>Width: {spaceship.width}</p>
-        <p>Height: {spaceship.height}</p>
-        <p>Top Speed: {spaceship.topSpeed}</p>
-        <p>Crew: {spaceship.crew}</p>
-        <p>Weapons: {spaceship.weapons}</p>
+      <div className=" text-center flex flex-col gap-4 ">
+        <p className=" text-3xl font-bold ">Specifications</p>
+        <p className=" md:text-2xl ">model: {spaceship.name}</p>
+        <p className=" md:text-2xl ">Primary Color: {spaceship.primaryColor}</p>
+        <p className=" md:text-2xl ">
+          Secondary Color: {spaceship.secondaryColor}
+        </p>
+        <p className=" md:text-2xl ">Current Owner: {spaceship.currentOwner}</p>
+        <p className=" md:text-2xl ">Status: {spaceship.status}</p>
+        <p className=" md:text-2xl ">Primary Use: {spaceship.primaryUse}</p>
+        <p className=" md:text-2xl ">Length: {spaceship.length}</p>
+        <p className=" md:text-2xl ">Width: {spaceship.width}</p>
+        <p className=" md:text-2xl ">Height: {spaceship.height}</p>
+        <p className=" md:text-2xl ">Top Speed: {spaceship.topSpeed}</p>
+        <p className=" md:text-2xl ">Crew: {spaceship.crew}</p>
+        <p className=" md:text-2xl ">Weapons: {spaceship.weapons}</p>
       </div>
     </div>
   );
