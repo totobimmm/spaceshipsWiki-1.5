@@ -15,6 +15,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Human",
 	},
 	{
 		id: 1,
@@ -32,6 +33,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Human",
 	},
 	{
 		id: 2,
@@ -49,6 +51,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Human",
 	},
 	{
 		id: 3,
@@ -66,6 +69,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Human",
 	},
 	{
 		id: 4,
@@ -83,6 +87,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Human",
 	},
 	{
 		id: 5,
@@ -100,6 +105,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Human",
 	},
 	{
 		id: 6,
@@ -117,6 +123,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Al'Ong",
 	},
 	{
 		id: 7,
@@ -134,6 +141,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Al'Ong",
 	},
 	{
 		id: 8,
@@ -151,6 +159,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Al'Ong",
 	},
 	{
 		id: 9,
@@ -168,6 +177,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Al'Ong",
 	},
 	{
 		id: 10,
@@ -185,6 +195,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Al'Ong",
 	},
 	{
 		id: 11,
@@ -202,6 +213,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Titan",
 	},
 	{
 		id: 12,
@@ -219,6 +231,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Treasurers",
 	},
 	{
 		id: 13,
@@ -236,6 +249,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Treasurers",
 	},
 	{
 		id: 14,
@@ -253,6 +267,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Treasurers",
 	},
 	{
 		id: 15,
@@ -270,6 +285,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Treasurers",
 	},
 	{
 		id: 16,
@@ -287,6 +303,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Asterion",
 	},
 	{
 		id: 17,
@@ -304,6 +321,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Rez",
 	},
 	{
 		id: 18,
@@ -321,6 +339,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Rez",
 	},
 	{
 		id: 19,
@@ -338,6 +357,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Rez",
 	},
 	{
 		id: 20,
@@ -355,6 +375,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Rez",
 	},
 	{
 		id: 21,
@@ -372,6 +393,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Tianzi",
 	},
 	{
 		id: 22,
@@ -389,6 +411,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Tianzi",
 	},
 	{
 		id: 23,
@@ -406,6 +429,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Tianzi",
 	},
 	{
 		id: 24,
@@ -423,6 +447,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Tianzi",
 	},
 	{
 		id: 25,
@@ -440,6 +465,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Gotchi",
 	},
 	{
 		id: 26,
@@ -457,6 +483,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Gotchi",
 	},
 	{
 		id: 27,
@@ -474,6 +501,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Gotchi",
 	},
 	{
 		id: 28,
@@ -491,6 +519,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Gotchi",
 	},
 	{
 		id: 29,
@@ -508,6 +537,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Cucurbitaceae",
 	},
 	{
 		id: 30,
@@ -525,6 +555,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Cucurbitaceae",
 	},
 	{
 		id: 31,
@@ -542,6 +573,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Cucurbitaceae",
 	},
 	{
 		id: 32,
@@ -559,6 +591,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Meles",
 	},
 	{
 		id: 33,
@@ -576,6 +609,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Meles",
 	},
 	{
 		id: 34,
@@ -593,6 +627,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Meles",
 	},
 	{
 		id: 35,
@@ -610,6 +645,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Meles",
 	},
 	{
 		id: 36,
@@ -627,6 +663,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Meles",
 	},
 	{
 		id: 37,
@@ -644,6 +681,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Wizards",
 	},
 	{
 		id: 38,
@@ -661,6 +699,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Wizards",
 	},
 	{
 		id: 39,
@@ -678,6 +717,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Wizards",
 	},
 	{
 		id: 40,
@@ -695,6 +735,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Wizards",
 	},
 	{
 		id: 41,
@@ -712,6 +753,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Kleroterion",
 	},
 	{
 		id: 42,
@@ -729,6 +771,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Kleroterion",
 	},
 	{
 		id: 43,
@@ -746,6 +789,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Kleroterion",
 	},
 	{
 		id: 44,
@@ -763,6 +807,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Kleroterion",
 	},
 	{
 		id: 45,
@@ -780,6 +825,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Lunarella",
 	},
 	{
 		id: 46,
@@ -797,6 +843,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Lunarella",
 	},
 	{
 		id: 47,
@@ -814,6 +861,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Lunarella",
 	},
 	{
 		id: 48,
@@ -831,6 +879,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Lunarella",
 	},
 	{
 		id: 49,
@@ -848,6 +897,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Al'Ong",
 	},
 	{
 		id: 50,
@@ -865,6 +915,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Asterion",
 	},
 	{
 		id: 51,
@@ -882,6 +933,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Asterion",
 	},
 	{
 		id: 52,
@@ -899,6 +951,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Vysteons",
 	},
 	{
 		id: 53,
@@ -916,6 +969,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Vysteons",
 	},
 	{
 		id: 54,
@@ -933,6 +987,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Vysteons",
 	},
 	{
 		id: 55,
@@ -950,6 +1005,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Vysteons",
 	},
 	{
 		id: 56,
@@ -966,6 +1022,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Herd",
 	},
 	{
 		id: 57,
@@ -983,6 +1040,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Herd",
 	},
 	{
 		id: 58,
@@ -1000,6 +1058,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Herd",
 	},
 	{
 		id: 59,
@@ -1017,6 +1076,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Herd",
 	},
 	{
 		id: 60,
@@ -1034,6 +1094,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Etherean",
 	},
 	{
 		id: 61,
@@ -1051,6 +1112,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "The Yammerians",
 	},
 	{
 		id: 62,
@@ -1068,6 +1130,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "The Yammerians",
 	},
 	{
 		id: 63,
@@ -1085,6 +1148,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "The Yammerians",
 	},
 	{
 		id: 64,
@@ -1102,6 +1166,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Al'Ong",
 	},
 	{
 		id: 65,
@@ -1119,6 +1184,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Void",
 	},
 	{
 		id: 66,
@@ -1136,6 +1202,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Void",
 	},
 	{
 		id: 67,
@@ -1153,6 +1220,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Void",
 	},
 	{
 		id: 68,
@@ -1170,6 +1238,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Void",
 	},
 	{
 		id: 69,
@@ -1187,6 +1256,7 @@ const spaceships = [
 		topSpeed: null,
 		crew: null,
 		weapons: null,
+		manufacturer: "Void",
 	},
 ];
 

@@ -64,6 +64,34 @@
   animation: hidePage 0.6s ease-out forwards;
 }
 
+@keyframes showLoading {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.show-loading {
+  animation: showLoading 0.6s ease-out forwards;
+}
+
+@keyframes hideLoading {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.hide-loading {
+  animation: hideLoading 0.6s ease-out forwards;
+}
+
 html,
 body {
   background-color: black;

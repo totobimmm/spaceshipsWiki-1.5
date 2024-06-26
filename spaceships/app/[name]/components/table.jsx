@@ -2,7 +2,6 @@ import React from "react";
 import spaceships from "@/app/spaceships.js";
 import { usePathname } from "next/navigation";
 
-
 const Table = () => {
 	const name = usePathname().substring(1);
 	const spaceship = spaceships.find((ship) => ship.href === name);
@@ -11,6 +10,7 @@ const Table = () => {
 		<div className=' text-center flex flex-col gap-4 '>
 			<p className=' text-3xl font-bold '>Specifications</p>
 			<p className=' md:text-2xl '>model: {spaceship.name}</p>
+			<p className=' md:text-2xl '>Manufacturer: {spaceship.manufacturer}</p>
 			<p className=' md:text-2xl '>Primary Color: {spaceship.primaryColor}</p>
 			<p className=' md:text-2xl '>
 				Secondary Color: {spaceship.secondaryColor}
