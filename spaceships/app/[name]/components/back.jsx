@@ -10,7 +10,11 @@ const Back = () => {
 
   return (
     <Link
-      href={`/${spaceships[spaceship.id - 1].href}`}
+      href={`/${
+        spaceship.id - 1 === 999
+          ? "Sound-Wave"
+          : spaceships[spaceship.id - 1].href
+      }`}
       className=" fixed left-8 bottom-8 flex items-start gap-3 drop-shadow-[2.5px_0_60px_rgba(255,255,255,1)] ">
       <FaArrowLeftLong id="arrow-left" className=" duration-300 text-white " />{" "}
       <button

@@ -35,14 +35,12 @@ const DisplayImage = () => {
         readOnly={spaceship.supply === 1 ? true : false}
         className={` text-center bg-transparent border rounded-md hover:border-[grey] duration-300 fixed top-[7rem] left-6 w-[18%] p-2 `}
         type="number"
+        placeholder="0"
         value={imageNumber}
         onChange={(e) => {
           setImageNumber(e.target.value);
           if (e.target.value > spaceship.supply) {
             setImageNumber(spaceship.supply);
-          }
-          if (e.target.value < 1) {
-            setImageNumber(1);
           }
         }}
       />

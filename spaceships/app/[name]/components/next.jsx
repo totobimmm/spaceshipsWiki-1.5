@@ -7,11 +7,16 @@ import { usePathname } from "next/navigation";
 const Next = () => {
   const name = usePathname().substring(1);
   const spaceship = spaceships.find((ship) => ship.href === name);
-  console.log(spaceship.id);
 
   return (
     <Link
-      href={`/${spaceships[spaceship.id + 1].href}`}
+      href={`/${
+        spaceship.id === 69
+          ? "Mule"
+          : spaceship.id === 1000
+          ? "Jumper"
+          : spaceships[spaceship.id + 1].href
+      }`}
       className=" fixed right-8 bottom-8 flex items-start gap-3 drop-shadow-[2.5px_0_60px_rgba(255,255,255,1)] ">
       <button
         onMouseEnter={(e) => {
