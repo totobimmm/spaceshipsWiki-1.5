@@ -60,9 +60,19 @@ const DisplayImage = () => {
 					Please set a value
 				</h1>
 			)}
+			<div
+				id='temp '
+				className={`w-[45vw] max-w-[580px] min-w-[150px] ${
+					imageNumber > spaceship.supply || imageNumber < 1
+						? "visible"
+						: "hidden"
+				}`}
+			>
+				<p>there is nothing there</p>
+			</div>
 			<img
 				id='card'
-				className={`w-[45%] max-w-[580px] min-w-[150px] ${
+				className={`w-[45%vw] max-w-[580px] min-w-[150px] ${
 					imageNumber > spaceship.supply || imageNumber < 1
 						? "hidden"
 						: "visible"
