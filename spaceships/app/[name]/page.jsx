@@ -41,25 +41,50 @@ export default function SpaceshipPage() {
   return (
     <div className=" min-h-screen text-white flex justify-center items-center flex-col">
       <input
-        contentEditable
-        className=" fixed top-[7rem] left-6 w-[18%] p-2"
+        className={` text-center bg-transparent border rounded-md hover:border-[grey] duration-300 fixed top-[7rem] left-6 w-[18%] p-2 `}
         type="number"
         value={imageNumber}
-        onChange={(e) => setImageNumber(e.target.value)}
+        onChange={(e) => {
+          setImageNumber(e.target.value);
+          if (e.target.value > spaceship.maxNumber) {
+            setImageNumber(spaceship.maxNumber);
+          }
+        }}
       />
-      <img className="w-1/2" src={imageUrl} alt={spaceship.name} />
-      <p>model: {spaceship.name}</p>
-      <p>Primary Color: {spaceship.primaryColor}</p>
-      <p>Secondary Color: {spaceship.secondaryColor}</p>
-      <p>Current Owner: {spaceship.currentOwner}</p>
-      <p>Status: {spaceship.status}</p>
-      <p>Primary Use: {spaceship.primaryUse}</p>
-      <p>Length: {spaceship.length}</p>
-      <p>Width: {spaceship.width}</p>
-      <p>Height: {spaceship.height}</p>
-      <p>Top Speed: {spaceship.topSpeed}</p>
-      <p>Crew: {spaceship.crew}</p>
-      <p>Weapons: {spaceship.weapons}</p>
+      {imageNumber > spaceship.maxNumber && (
+        <h1 className=" text-red-500 ">
+          Please set a value between 1 and {spaceship.maxNumber}
+        </h1>
+      )}
+      {imageNumber < 1 && (
+        <h1 className=" text-red-500 fixed top-[10rem] text-3xl ">
+          Please set a value between 1 and {spaceship.maxNumber}
+        </h1>
+      )}
+      <img
+        id="card"
+        className={`w-1/4 ${
+          imageNumber > spaceship.maxNumber || imageNumber < 1
+            ? "hidden"
+            : "visible"
+        }`}
+        src={imageUrl}
+        alt={spaceship.name}
+      />
+      <div className=" text-center ">
+        <p>model: {spaceship.name}</p>
+        <p>Primary Color: {spaceship.primaryColor}</p>
+        <p>Secondary Color: {spaceship.secondaryColor}</p>
+        <p>Current Owner: {spaceship.currentOwner}</p>
+        <p>Status: {spaceship.status}</p>
+        <p>Primary Use: {spaceship.primaryUse}</p>
+        <p>Length: {spaceship.length}</p>
+        <p>Width: {spaceship.width}</p>
+        <p>Height: {spaceship.height}</p>
+        <p>Top Speed: {spaceship.topSpeed}</p>
+        <p>Crew: {spaceship.crew}</p>
+        <p>Weapons: {spaceship.weapons}</p>
+      </div>
     </div>
   );
 }
