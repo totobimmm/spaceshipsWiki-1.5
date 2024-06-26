@@ -5,6 +5,7 @@ import spaceships from "./spaceships";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaRocket, FaBars } from "react-icons/fa";
+import { RxCross1 } from "react-icons/rx";
 import Loading from "./Loading";
 
 const navItemVariants = {
@@ -41,6 +42,7 @@ export default function Home() {
   const [innerWidth, setInnerWidth] = useState(0);
   const [loading, setLoading] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [showCross, setShowCross] = useState(false);
 
   useEffect(() => {
     setLoading(false);
@@ -97,7 +99,18 @@ export default function Home() {
     return acc;
   }, {});
 
-  return (
+  return showCross ? (
+    <div className=" flex flex-col justify-center items-center">
+      <RxCross1
+        size={80}
+        onClick={() => {
+          setShowCross(false);
+        }}
+        className={` absolute top-0 right-0 ${showCross ? "block" : "hidden"} `}
+      />
+      <h1>Hello</h1>
+    </div>
+  ) : (
     <>
       {loading && <Loading />}
       <div className={`relative ${loading ? "hidden" : "show-page"}`}>
@@ -110,8 +123,17 @@ export default function Home() {
           ))}
         </nav>
         <div className=" flex justify-center items-center bg-[url('https://twist-tales.com/wp-content/uploads/2023/09/Cometh-Cosmik-Battle-Title-16-9.png')] no-repeat bg-cover bg-center h-screen">
+          <FaBars
+            size={80}
+            onClick={() => {
+              setShowCross(true);
+            }}
+            className={` absolute top-0 right-0 ${
+              showCross ? "hidden" : "block"
+            }`}
+          />
           <img
-            className={` w-[75%] max-sm:w-[90%] max-w-[540px] ${
+            className={` w-[75%] max-sm:w-[90%] max-w-[540px] min-w-32 ${
               isLoaded ? "slide-in" : "hidden"
             } `}
             src={
@@ -133,7 +155,21 @@ export default function Home() {
               <div className=" text-center flex py-4  justify-center items-center flex-wrap spaceships">
                 {categorizedSpaceships[manufacturer].map((spaceship) => (
                   <Link
-                    className=" text-xl bg-[rgba(255, 255, 255, 0.8)] px-2 hover:bg-[rgba(120, 120, 120, 0.8)] text-white rounded-md"
+                    className=" text-xl px-4 py-2 my-4 mx-2 duration-300 text-black rounded-md"
+                    style={{
+                      background: "rgba(255, 255, 255, 0.8)",
+                      backdropFilter: "blur(10px)",
+                    }}
+                    onMouseEnter={(e) => {
+                      const target = e.target;
+                      target.style.background = "rgba(120, 120, 120, 0.8)";
+                      target.style.scale = 1.2;
+                    }}
+                    onMouseLeave={(e) => {
+                      const target = e.target;
+                      target.style.background = "rgba(255, 255, 255, 0.8)";
+                      target.style.scale = 1;
+                    }}
                     key={spaceship.id}
                     href={`/${spaceship.href}`}>
                     {spaceship.name}
