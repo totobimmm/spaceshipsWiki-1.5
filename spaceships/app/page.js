@@ -2,7 +2,6 @@
 import "./page.css";
 import { useEffect, useState } from "react";
 import spaceships from "./spaceships";
-import getSpaceships from "./spaceships";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaRocket, FaBars } from "react-icons/fa";

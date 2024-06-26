@@ -30,9 +30,10 @@ export default function SpaceshipPage() {
   const updateImageSrc = useCallback(() => {
     const formattedNumber = String(imageNumber - 1).padStart(4, "0");
     setImageUrl(
-      `https://images.service.cometh.io/${spaceship.id}00${formattedNumber}.png`
+      `https://images.service.cometh.io/${spaceship.id}00${formattedNumber}.png` 
     );
   }, [imageNumber, spaceship.id]);
+  // apprendre usecallback
 
   useEffect(() => {
     updateImageSrc();
@@ -41,31 +42,31 @@ export default function SpaceshipPage() {
   return (
     <div className=" min-h-screen text-white flex justify-center items-center flex-col gap-8 ">
       <input
-        readOnly={spaceship.maxNumber === 1 ? true : false}
+        readOnly={spaceship.supply === 1 ? true : false}
         className={` text-center bg-transparent border rounded-md hover:border-[grey] duration-300 fixed top-[7rem] left-6 w-[18%] p-2 `}
         type="number"
         value={imageNumber}
         onChange={(e) => {
           setImageNumber(e.target.value);
-          if (e.target.value > spaceship.maxNumber) {
-            setImageNumber(spaceship.maxNumber);
+          if (e.target.value > spaceship.supply) {
+            setImageNumber(spaceship.supply);
           }
         }}
       />
-      {imageNumber > spaceship.maxNumber && (
+      {imageNumber > spaceship.supply && (
         <h1 className=" text-red-500 ">
-          Please set a value between 1 and {spaceship.maxNumber}
+          Please set a value between 1 and {spaceship.supply}
         </h1>
       )}
       {imageNumber < 1 && (
         <h1 className=" text-red-500 fixed top-[10rem] text-3xl ">
-          Please set a value between 1 and {spaceship.maxNumber}
+          Please set a value between 1 and {spaceship.supply}
         </h1>
       )}
       <img
         id="card"
         className={`w-[45%] max-w-[580px] min-w-[150px] ${
-          imageNumber > spaceship.maxNumber || imageNumber < 1
+          imageNumber > spaceship.supply || imageNumber < 1
             ? "hidden"
             : "visible"
         }`}
