@@ -65,22 +65,23 @@ const DisplayImage = () => {
 			)}
 			<div
 				id='temp '
-				className={`h-[45vw] max-h-[580px] min-h-[240px] ${
+				className={`h-[65vw] max-h-[580px] min-h-[240px] flex justify-center items-center ${
 					imageNumber > spaceship.supply || imageNumber < 1
 						? "visible"
 						: "hidden"
 				}`}
+			></div>
+			<Link
+				className={`h-[65vw] w-fit max-h-[580px] min-h-[240px] ${
+					imageNumber > spaceship.supply || imageNumber < 1
+						? "hidden"
+						: "visible"
+				}`}
+				href={imageUrl}
 			>
-				<p className=' text-center '></p>
-			</div>
-			<Link href={imageUrl}>
 				<img
 					id='card'
-					className={`h-[65vw] max-h-[580px] min-h-[240px] ${
-						imageNumber > spaceship.supply || imageNumber < 1
-							? "hidden"
-							: "visible"
-					}`}
+					className=' h-full mx-auto '
 					src={imageUrl}
 					alt={spaceship.name}
 				/>
