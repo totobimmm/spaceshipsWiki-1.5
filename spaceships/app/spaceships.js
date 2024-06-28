@@ -1011,6 +1011,7 @@ const spaceships = [
 		id: 56,
 		href: "Ape-X",
 		name: "Ape-X",
+		supply: 200,
 		primaryColor: null,
 		secondaryColor: null,
 		currentOwner: null,
