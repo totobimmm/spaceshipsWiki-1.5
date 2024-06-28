@@ -1,7 +1,7 @@
-import { Advent_Pro } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const adventPro = Advent_Pro({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
 	title: "Spaceships wiki",
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
 			<head>
 				<link rel='icon' href='/favicon.jpg' />
 			</head>
-			<body className={adventPro.className}>{children}</body>
+			<body className={inter.className}>{children}</body>
 		</html>
 	);
 }
