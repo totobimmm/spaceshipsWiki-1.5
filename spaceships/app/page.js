@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import spaceships from "./spaceships";
 import { FaBars } from "react-icons/fa";
 import Link from "next/link";
-import Loading from "./Loading";
+import Loading from "./components/Loading";
 import NavLinkMap from "./components/navlinkmap";
 import SecNavLinkMap from "./components/secnavlinkmap";
 import Introduction from "./components/introduction";

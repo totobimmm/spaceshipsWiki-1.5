@@ -3,7 +3,7 @@ import React from "react";
 import { useState, useCallback, useEffect } from "react";
 import spaceships from "@/app/spaceships.js";
 import { usePathname } from "next/navigation";
-import Loading from "../../Loading.jsx";
+import Loading from "../../components/Loading.jsx";
 import Link from "next/link.js";
 
 const DisplayImage = () => {

@@ -9,9 +9,8 @@ import {
 	NavigationMenuTrigger,
 	NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
-import Image from "next/image";
 
-export default function Home() {
+export default function Home(): JSX.Element {
 	const Header = () => {
 		return (
 			<NavigationMenu>

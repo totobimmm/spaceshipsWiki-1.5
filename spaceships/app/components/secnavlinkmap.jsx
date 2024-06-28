@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import NAV_LINKS from "./nav_links";
 import SecNavLink from "./secnavlink";
 import { RxCross1 } from "react-icons/rx";
-import Loading from "../loading";
+import Loading from "./Loading";
 
 const SecNavLinkMap = () => {
 	const [scrollY, setScrollY] = useState(0);
