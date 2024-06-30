@@ -20,6 +20,11 @@
   background: #555;
 }
 
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+
 @keyframes slideIn {
   0% {
     transform: translateX(-10%);

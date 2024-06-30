@@ -5,7 +5,7 @@ import NavLink from "./navlink";
 const NavLinkMap = () => {
 	return (
 		<nav
-			className={` min-[640px]:hidden w-full flex z-10 text-white items-center justify-center absolute left-0 bg-[#121012] `}
+			className={` max-sm:hidden w-full flex z-10 text-white items-center justify-center absolute left-0 bg-[#121012] `}
 		>
 			{Array.isArray(NAV_LINKS) &&
 				NAV_LINKS.map((link, index) => <NavLink key={index} {...link} />)}

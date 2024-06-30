@@ -12,13 +12,19 @@ import { RxCross1 } from "react-icons/rx";
 
 export default function Home() {
 	const [loading, setLoading] = useState(true);
-	const [isLoaded, setIsLoaded] = useState(false);
 	const [showCross, setShowCross] = useState(false);
 
 	useEffect(() => {
 		setLoading(false);
-		setIsLoaded(true);
 	}, []);
+
+	useEffect(() => {
+		if (showCross) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "auto";
+		}
+	}, [showCross]);
 
 	const categorizedSpaceships = spaceships.reduce((acc, spaceship) => {
 		const manufacturer = spaceship.manufacturer;
@@ -40,7 +46,7 @@ export default function Home() {
 							.getElementById("secNavLinkMap")
 							.classList.remove("-translate-y-[100vh]");
 					}}
-					className={` absolute top-3 z-20 cursor-pointer ${
+					className={` fixed top-3 z-20 cursor-pointer sm:hidden ${
 						showCross ? "hidden" : "block"
 					} right-3`}
 				/>
@@ -53,7 +59,7 @@ export default function Home() {
 							.getElementById("secNavLinkMap")
 							.classList.add("-translate-y-[100vh]");
 					}}
-					className={`z-20 absolute top-3 z-20 cursor-pointer ${
+					className={`z-20 fixed top-3 z-20 cursor-pointer sm:hidden ${
 						!showCross ? "hidden" : "block"
 					} right-3`}
 				/>

@@ -12,7 +12,7 @@ const SecNavLinkMap = ({ className, id }) => {
 					NAV_LINKS.map((link, index) => (
 						<SecNavLink
 							divClassName={" max-[400px]:h-7 max-[400px]:my-1 "}
-							className={" max-[400px]:text-base "}
+							className={"  "}
 							key={index}
 							{...link}
 						/>

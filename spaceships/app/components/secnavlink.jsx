@@ -21,7 +21,7 @@ const SecNavLink = ({ href, text, icon, className, divClassName }) => {
 		>
 			<Link
 				href={href}
-				className={`${className} flex items-center justify-center max-sm:text-sm`}
+				className={`${className} flex items-center text-2xl justify-center max-[400px]:text-sm`}
 			>
 				{icon ? (
 					<img width={35} height={35} alt='icon' src={icon} />
