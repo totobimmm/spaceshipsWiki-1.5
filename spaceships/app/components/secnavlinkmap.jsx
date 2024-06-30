@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import NAV_LINKS from "./nav_links";
 import SecNavLink from "./secnavlink";
 

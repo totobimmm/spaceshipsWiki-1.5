@@ -21,7 +21,6 @@ const SecNavLink = ({ href, text, icon, className, divClassName }) => {
 		>
 			<Link
 				href={href}
-				py={icon ? 0 : 2}
 				className={`${className} flex items-center justify-center max-sm:text-sm`}
 			>
 				{icon ? (
