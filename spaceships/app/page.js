@@ -8,6 +8,7 @@ import Loading from "./components/Loading";
 import NavLinkMap from "./components/navlinkmap";
 import SecNavLinkMap from "./components/secnavlinkmap";
 import Introduction from "./components/introduction";
+import { RxCross1 } from "react-icons/rx";
 
 export default function Home() {
 	const [loading, setLoading] = useState(true);
@@ -20,7 +21,7 @@ export default function Home() {
 	}, []);
 
 	const categorizedSpaceships = spaceships.reduce((acc, spaceship) => {
-		const { manufacturer } = spaceship;
+		const manufacturer = spaceship.manufacturer;
 		if (!acc[manufacturer]) {
 			acc[manufacturer] = [];
 		}
@@ -28,24 +29,43 @@ export default function Home() {
 		return acc;
 	}, {});
 
-	return showCross ? (
-		<div>
-			<SecNavLinkMap />
-		</div>
-	) : (
+	return (
 		<>
-			{loading && <Loading />}
-			<div className={`relative ${loading ? "hidden" : "show-page"}`}>
+			{!showCross ? (
 				<FaBars
 					size={40}
 					onClick={() => {
 						setShowCross(true);
+						document
+							.getElementById("secNavLinkMap")
+							.classList.remove("-translate-y-[100vh]");
 					}}
-					className={` absolute top-3 right-3 ${
+					className={` absolute top-3 z-20 ${
 						showCross ? "hidden" : "block"
-					}`}
+					} max-sm:left-1/2 max-sm:-translate-x-1/2 sm:right-3`}
 				/>
+			) : (
+				<RxCross1
+					size={40}
+					onClick={() => {
+						setShowCross(false);
+						document
+							.getElementById("secNavLinkMap")
+							.classList.add("-translate-y-[100vh]");
+					}}
+					className={`z-20 absolute top-3 z-20 ${
+						!showCross ? "hidden" : "block"
+					} max-sm:left-1/2 max-sm:-translate-x-1/2 sm:right-3`}
+				/>
+			)}
+			{loading && <Loading />}
+			<SecNavLinkMap
+				id={"secNavLinkMap"}
+				className={` z-10 ${!showCross ? "-translate-y-[100vh]" : ""} `}
+			/>
+			<div className={`relative ${loading ? "hidden" : "show-page"}`}>
 				<NavLinkMap />
+
 				<Introduction />
 				<div className=' flex flex-wrap p-1 flex-col justify-center items-center'>
 					{Object.keys(categorizedSpaceships).map((manufacturer) => (

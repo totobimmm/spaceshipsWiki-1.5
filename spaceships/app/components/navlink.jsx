@@ -4,24 +4,21 @@ import { FaRocket } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const NavLink = ({ href, text, icon }, { className }) => {
-	const [scrollY, setScrollY] = useState(0);
+const NavLink = ({ href, text, icon }) => {
 	const [innerWidth, setInnerWidth] = useState(0);
 
 	useEffect(() => {
-		const handleScroll = () => setScrollY(window.scrollY);
 		const handleResize = () => {
 			setInnerWidth(window.innerWidth);
 		};
 
-		window.addEventListener("scroll", handleScroll);
 		window.addEventListener("resize", handleResize);
 
 		return () => {
-			window.removeEventListener("scroll", handleScroll);
 			window.removeEventListener("resize", handleResize);
 		};
 	});
+
 	return (
 		<motion.div
 			whileHover='hover'

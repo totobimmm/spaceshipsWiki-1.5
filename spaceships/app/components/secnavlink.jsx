@@ -1,6 +1,4 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { FaRocket } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -14,30 +12,18 @@ const navItemVariants = {
 	},
 };
 
-const SecNavLink = ({ href, text, icon }) => {
-	const [innerWidth, setInnerWidth] = useState(0);
-
-	useEffect(() => {
-		const handleScroll = () => setScrollY(window.scrollY);
-		const handleResize = () => {
-			setInnerWidth(window.innerWidth);
-		};
-
-		window.addEventListener("scroll", handleScroll);
-		window.addEventListener("resize", handleResize);
-
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-			window.removeEventListener("resize", handleResize);
-		};
-	});
+const SecNavLink = ({ href, text, icon, className, divClassName }) => {
 	return (
 		<motion.div
 			variants={navItemVariants}
 			whileHover='hover'
-			className=' h-14 text-2xl sm:hidden flex text-center justify-center items-center hover:text-yellow-100 w-full my-2'
+			className={`${divClassName} h-14 text-2xl flex text-center justify-center items-center hover:text-yellow-100 w-full my-2 `}
 		>
-			<Link href={href} py={icon ? 0 : 2}>
+			<Link
+				href={href}
+				py={icon ? 0 : 2}
+				className={`${className} flex items-center justify-center`}
+			>
 				{icon ? (
 					<img width={35} height={35} alt='icon' src={icon} />
 				) : (
@@ -51,7 +37,6 @@ const SecNavLink = ({ href, text, icon }) => {
 						}}
 						whileHover={{ opacity: 1 }}
 					>
-						{innerWidth >= 1200 && <FaRocket />}
 						{text}
 					</motion.div>
 				)}
