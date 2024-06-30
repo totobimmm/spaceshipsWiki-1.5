@@ -40,9 +40,9 @@ export default function Home() {
 							.getElementById("secNavLinkMap")
 							.classList.remove("-translate-y-[100vh]");
 					}}
-					className={` absolute top-3 z-20 ${
+					className={` absolute top-3 z-20 cursor-pointer ${
 						showCross ? "hidden" : "block"
-					} max-sm:left-1/2 max-sm:-translate-x-1/2 sm:right-3`}
+					} right-3`}
 				/>
 			) : (
 				<RxCross1
@@ -53,9 +53,9 @@ export default function Home() {
 							.getElementById("secNavLinkMap")
 							.classList.add("-translate-y-[100vh]");
 					}}
-					className={`z-20 absolute top-3 z-20 ${
+					className={`z-20 absolute top-3 z-20 cursor-pointer ${
 						!showCross ? "hidden" : "block"
-					} max-sm:left-1/2 max-sm:-translate-x-1/2 sm:right-3`}
+					} right-3`}
 				/>
 			)}
 			{loading && <Loading />}

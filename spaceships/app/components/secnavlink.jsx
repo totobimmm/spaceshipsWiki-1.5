@@ -17,12 +17,12 @@ const SecNavLink = ({ href, text, icon, className, divClassName }) => {
 		<motion.div
 			variants={navItemVariants}
 			whileHover='hover'
-			className={`${divClassName} h-14 text-2xl flex text-center justify-center items-center hover:text-yellow-100 w-full my-2 `}
+			className={`${divClassName}max-sm:h-7 text-2xl flex text-center justify-center items-center hover:text-yellow-100 w-full my-2 `}
 		>
 			<Link
 				href={href}
 				py={icon ? 0 : 2}
-				className={`${className} flex items-center justify-center`}
+				className={`${className} flex items-center justify-center max-sm:text-sm`}
 			>
 				{icon ? (
 					<img width={35} height={35} alt='icon' src={icon} />
